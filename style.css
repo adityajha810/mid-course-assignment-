@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Ensure positioning context for z-index to work */
+}
+
+h1 {
+    font-weight:900;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 15px 4px 10px rgba(6, 6, 6, 0.96);
+   font-style: italic;
+    font-size: 3.0rem;
+    line-height: 1.8;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: rgb(247, 247, 13);
+    margin: 50px;
+    overflow: visible;
+    position: absolute;
+    top: 47%; /* Adjusted for better centering */
+    left: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Set a higher z-index value for the h1 */
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    position: relative; /* Ensure positioning context for z-index to work */
+    z-index: 1; /* Set a higher z-index value for the navigation bar */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+.maindiv {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: 100% 100%;
+    animation: slider 16s infinite linear;
+    z-index: 0; /* Set a lower z-index value for the maindiv */
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+
+    25% {
+        background-image: url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+
+    50% {
+        background-image: url('https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+
+    75% {
+        background-image: url('https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+}
